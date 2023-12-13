@@ -3,8 +3,8 @@
         Torpedó
     </h1>
     <a>Csatába!</a>
-    <a href="/tutorial">Kezdők kézikönyve</a>
-    <a href="/keszitok">Készítők</a>
+    <a href="tutorial">Kezdők kézikönyve</a>
+    <a href="keszitok">Készítők</a>
 </main>
 
 <style scoped>

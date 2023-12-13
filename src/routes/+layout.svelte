@@ -30,7 +30,7 @@
     :global(body){
         min-height: 100vh;
         font-family: sans-serif;
-        background-image: url("kepek/background.jpg");
+        background-image: url("$lib/kepek/background.jpg");
         background-size: cover;
     }
     
