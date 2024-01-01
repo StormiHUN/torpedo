@@ -2,7 +2,7 @@
     <h1>
         Torpedó
     </h1>
-    <a>Csatába!</a>
+    <a href="battle">Csatába!</a>
     <a href="tutorial">Kezdők kézikönyve</a>
     <a href="keszitok">Készítők</a>
 </main>
