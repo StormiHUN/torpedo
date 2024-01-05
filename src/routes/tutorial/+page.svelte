@@ -1,8 +1,8 @@
 <main>
     <h3>A játék</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam tempora deserunt blanditiis beatae, cumque libero obcaecati sapiente quasi totam molestias consequatur amet incidunt quam assumenda aut at officiis delectus voluptatem corporis, eius doloremque sint ullam nisi ab! Numquam harum eveniet, ipsa ullam optio alias magni ipsam corporis adipisci. Minima quod eveniet non recusandae dolores sequi commodi velit impedit. Ab excepturi quos aliquam dicta atque quis ad minima iure unde! Iure, similique a. Illum adipisci, a ad quidem error delectus deserunt perferendis ut nostrum eos nulla labore veritatis saepe. Quisquam expedita inventore facilis amet dicta, voluptatibus corporis culpa nam quis harum!</p>
+    <p>A Torpedó kétszemélyes stratégiai táblajáték, mely 2x2 db négyzetarányos táblán játszható. A győzelemhez ki kell lőni az ellenfél összes hajóját. Bár a Torpedó táblás játék, leginkább papíron szokták játszani</p>
     <h3>Játékmenet</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut in perferendis similique placeat laborum est necessitatibus distinctio fugit ipsum nulla?</p>
+    <p>A játékosok felváltva mondanak egymásnak pozíciókat, (pl. A3) és mindketten kijelölik a mondott területet. Találatnak számít, ha eltalálunk egy hajót, süllyedésnek, ha minden kockáját eltaláltuk. A játék akkor ér véget, ha valamelyik játékosnak az összes hajója ki van lőve. </p>
     <h3>Megvalósítás</h3>
     <p>Maric</p>
 </main>
