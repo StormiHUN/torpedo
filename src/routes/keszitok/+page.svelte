@@ -4,7 +4,6 @@
         <img id="ship2" src="battleship2.png">
         <p>Bugyi András Patrik</p>
         <p>Benacsek Dorián</p>
-        <p>Bing</p>
 </main>
 
 <style scoped>

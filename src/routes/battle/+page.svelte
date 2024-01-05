@@ -148,20 +148,39 @@
                 btn.classList.add("bumm")
                 shoot()
             }
+        if(segments <= 0) alert("Vesztettél")
+        if(enemy_segments <= 0) alert("Nyertél")
         })
     })
 
     
     
 
-    
+    const alreadyHit = []
+    const directHit = []
+    const irany = [,]
+
+
     function ifHit(target) {
-        if(document.getElementById("target").classList.contains("ship")) return true
+        if(document.getElementById(target).classList.contains("ship")) return true
         return false
     }
 
     function shoot() {
+        let rand = Math.floor(Math.random()*122)
+        do{
+            rand = Math.floor(Math.random()*122)
+        }while(alreadyHit.includes(rand))
+        if(ifHit(rand)){
+            directHit.push(rand)
+            document.getElementById(rand).insertAdjacentHTML("beforeend",'<img src="explosion.png" alt="Ship hit">&nbsp;')
+            segments--
+        }
         
+        document.getElementById(rand).classList.remove("ship")
+        document.getElementById(rand).classList.add("bumm")
+        alreadyHit.push(rand)
+
     }
 
   function generateShipCoordinates() {
