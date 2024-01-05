@@ -1,4 +1,5 @@
 <main>
+    <div id="back"><a href="/">Vissza</a></div>
     <div id="playershit">
         {#each [...Array(121).keys()] as x}
             <button id={x}>
@@ -34,6 +35,16 @@
         display: flex;
         gap: 2rem;
     }
+    #back{
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.5rem;
+    }
     #playershit, #enemyshit{
         display: grid;
         grid-template-columns: repeat(11,1fr);
@@ -65,6 +76,8 @@
 
 
     const ships = [6,4,3,3,2,2,2]
+    let segments = 22
+    let enemy_segments = 22
     let orientation = 1
     let currentship = 0
     const enemyships = generateShipCoordinates()
@@ -86,7 +99,32 @@
             if(e.button != 0) return
             if(!Array.from(buttons).includes(e.target)) return
             for(let i = 0; i < ships[currentship]; i++){
-                if(orientation == 0) document.getElementById(parseInt(e.target.id)+i).classList.add("ship")
+                let starting_element = document.getElementById(e.target.id)
+                if(parseInt(e.target.id)+i*11 > 121){
+                    starting_element.classList.remove("ship")
+                    for(let c = 0; c < i; c++) document.getElementById(parseInt(e.target.id)+c*11).classList.remove("ship")
+                    i--
+                    return
+                }
+                else if(Math.floor(starting_element.id/11) != Math.floor((parseInt(e.target.id)+i)/11)){
+                    starting_element.classList.remove("ship")
+                    for(let c = 0; c < i; c++) document.getElementById(parseInt(e.target.id)+c).classList.remove("ship")
+                    i--
+                    return
+                }
+                else if(orientation == 0 && document.getElementById(parseInt(e.target.id)+i).classList.contains("ship")){
+                    starting_element.classList.remove("ship")
+                    for(let c = 0; c < i; c++) document.getElementById(parseInt(e.target.id)+c).classList.remove("ship")
+                    i--
+                    return
+                }
+                else if(document.getElementById(parseInt(e.target.id)+i*11).classList.contains("ship")){
+                    starting_element.classList.remove("ship")
+                    for(let c = 0; c < i; c++) document.getElementById(parseInt(e.target.id)+c*11).classList.remove("ship")
+                    i--
+                    return
+                }
+                else if(orientation == 0) document.getElementById(parseInt(e.target.id)+i).classList.add("ship")
                 else document.getElementById(parseInt(e.target.id)+i*11).classList.add("ship")
             }
             currentship++
@@ -103,13 +141,28 @@
                 for(const v of enemyships) {
                     if(btn.dataset.key == v[0]+v[1]*11+12){
                         btn.insertAdjacentHTML("beforeend",'<img src="explosion.png" alt="Ship hit">&nbsp;')
+                        enemy_segments--
                         break
                     }
                 }
                 btn.classList.add("bumm")
+                shoot()
             }
         })
     })
+
+    
+    
+
+    
+    function ifHit(target) {
+        if(document.getElementById("target").classList.contains("ship")) return true
+        return false
+    }
+
+    function shoot() {
+        
+    }
 
   function generateShipCoordinates() {
   const boardSize = 10; 
@@ -141,7 +194,7 @@
   }
   
   
-  const shipLengths = [6, 4, 4, 3, 3, 3, 2, 2, 2, 2];
+  const shipLengths = [6,4,3,3,2,2,2];
   for (let i = 0; i < shipLengths.length; i++) {
     const shipID = i + 1;
     const length = shipLengths[i];
