@@ -1,5 +1,5 @@
 <main>
-    <div id="back"><a href="/">Vissza</a></div>
+    <div id="back"><a href="stormihun.github.io/torpedo/">Vissza</a></div>
     <div id="playershit">
         {#each [...Array(121).keys()] as x}
             <button id={x}>
