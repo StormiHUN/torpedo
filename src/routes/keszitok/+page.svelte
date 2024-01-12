@@ -1,4 +1,4 @@
-<div id="back"><a href="/">Vissza</a></div>
+<div id="back"><a href="stormihun.github.io/torpedo/">Vissza</a></div>
 <main>
         <img id="ship1" src="battleship.png">
         <img id="bullet1" src="bullet.png">
