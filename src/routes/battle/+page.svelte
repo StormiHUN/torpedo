@@ -41,9 +41,11 @@
         position: absolute;
         top: 5px;
         left: 5px;
-        text-decoration: none;
         color: white;
         border-radius: 0.5rem;
+    }
+    #back a{
+        text-decoration: none;
     }
     #playershit, #enemyshit{
         display: grid;

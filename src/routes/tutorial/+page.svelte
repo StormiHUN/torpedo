@@ -1,3 +1,4 @@
+<div id="back"><a href="/">Vissza</a></div>
 <main>
     <h3>A játék</h3>
     <p>A Torpedó kétszemélyes stratégiai táblajáték, mely 2x2 db négyzetarányos táblán játszható. A győzelemhez ki kell lőni az ellenfél összes hajóját. Bár a Torpedó táblás játék, leginkább papíron szokták játszani</p>
@@ -5,6 +6,7 @@
     <p>A játékosok felváltva mondanak egymásnak pozíciókat, (pl. A3) és mindketten kijelölik a mondott területet. Találatnak számít, ha eltalálunk egy hajót, süllyedésnek, ha minden kockáját eltaláltuk. A játék akkor ér véget, ha valamelyik játékosnak az összes hajója ki van lőve. </p>
     <h3>Megvalósítás</h3>
     <p>Maric</p>
+    
 </main>
 <style scoped>
     main{
@@ -26,4 +28,19 @@
     h3, p{
         filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
     }
+    #back{
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    #back a{
+        text-decoration: none;
+        color: white;
+    }
+
 </style>
