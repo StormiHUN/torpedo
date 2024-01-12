@@ -1,4 +1,4 @@
-<div id="back"><a href="/torpedo">Vissza</a></div>
+<div id="back"><a href="stormihun.github.io/torpedo/">Vissza</a></div>
 <main>
     <h3>A játék</h3>
     <p>A Torpedó kétszemélyes stratégiai táblajáték, mely 2x2 db négyzetarányos táblán játszható. A győzelemhez ki kell lőni az ellenfél összes hajóját. Bár a Torpedó táblás játék, leginkább papíron szokták játszani</p>
