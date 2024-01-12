@@ -97,7 +97,7 @@
 
 
     const ships = [6,4,3,3,2,2,2]
-    let segments = 23
+    let segments = 22
     let orientation = 1
     let currentship = 0
     const enemyships = generateShipCoordinates()
