@@ -153,7 +153,6 @@
             orientation = !orientation
         }
         const buttons2 = document.querySelectorAll("#enemyshit button")
-        countEnemys()
         buttons2.forEach((btn) => {
             btn.onclick = () => {
                 if(btn.innerText) return
@@ -180,12 +179,7 @@
     const irany = [,]
 
 
-    function countEnemys() {
-        let asd = 0
-        for(let i of enemyships){
-            console.log(i)
-        }
-    }
+    
 
     function enemyHit() {
         enemy_segments--
