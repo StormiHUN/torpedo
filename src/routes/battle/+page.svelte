@@ -54,7 +54,7 @@
         display: flex;
         gap: 2rem;
     }
-    #back{
+    #back a{
         background-color: rgba(255, 255, 255, 0.4);
         padding: 10px;
         position: absolute;
@@ -96,10 +96,10 @@
 
     const ships = [6,4,3,3,2,2,2]
     let segments = 23
-    let enemy_segments = 20
     let orientation = 1
     let currentship = 0
     const enemyships = generateShipCoordinates()
+    let enemy_segments = 16
     onMount(() => {
         const buttons = document.querySelectorAll("#playershit button")
         buttons.forEach((btn) => {
@@ -159,7 +159,7 @@
                 if(currentship < ships.length) return
                 if(btn.classList.contains("bumm")) return
                 for(const v of enemyships) {
-                    if(btn.dataset.key == (v[0]+v[1]*11)+12){
+                    if(btn.dataset.key == (v[0]+v[1]*11)){
                         btn.insertAdjacentHTML("beforeend",'<img src="explosion.png" alt="Ship hit">&nbsp;')
                         enemyHit()
                         break
@@ -170,6 +170,7 @@
             }
         })
     })
+    
 
     
     
@@ -224,7 +225,7 @@
         if(flag){
             html += "<h3>Győzelem</h3><br>"
             html += "<p>Elsüllyesztetted az ellenség összes hajóját</p><br>"
-            html += "<p>" + Math.round(20/shotsTaken*100) + " %-os volt a pontosságod</p><br>"
+            html += "<p>" + Math.round(16/shotsTaken*100) + " %-os volt a pontosságod</p><br>"
             html += "<p> " + segments + " hajód maradt </p>"
             document.getElementById("endScreen").innerHTML = html
         }else{
@@ -256,9 +257,9 @@
     
     for (let i = 0; i < length; i++) {
       if (horizontal) {
-        shipCoordinates.push([x + i, y]);
+        shipCoordinates.push([x + i + 1, y + 1]);
       } else {
-        shipCoordinates.push([x, y + i]);
+        shipCoordinates.push([x + 1, y + i + 1]);
       }
     }
     
@@ -271,7 +272,6 @@
     const shipID = i + 1;
     const length = shipLengths[i];
     const ship = generateRandomCoordinates(length);
-    
     ships.push(...ship.map(coord => [...coord, shipID]));
   }
   
